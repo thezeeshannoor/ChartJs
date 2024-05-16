@@ -6,7 +6,7 @@
     <title>Chart Js</title>
     <style>
        
-        #canvasDiv{
+        .canvasDiv{
             width: 500px;
             margin: 0 auto;
             display: flex;
@@ -33,11 +33,21 @@
 </head>
 <body>
     <h2 class="head">Population Of Pakistan</h2>
-    <div id="canvasDiv">
+    <div class="canvasDiv">
       <canvas id="myChart"></canvas>
       <canvas id="chartLine"></canvas>
     </div>
-    
+
+    <div class ="canvasDiv">
+      <canvas id="chartBar"></canvas>
+      <canvas id="chartDoughnut"></canvas>
+    </div>
+
+    <div class ="canvasDiv">
+       <canvas id="chartPolarArea"></canvas>
+       <canvas id="chartRadar"></canvas>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   
     <script src="./chart.js"></script>
 </body>

@@ -1,3 +1,4 @@
+//Chart Pie
 let myChart = document.getElementById('myChart');
 //dynmic data passing
 const data=[
@@ -22,6 +23,7 @@ let chart=new Chart(myChart,{
   data:{
       labels:data.map(lab=>lab.label),
       datasets:[{
+      
           label:'Population of Pakistan',
           data:data.map(lab=>lab.pop),
           // backgroundColor:['red','green','blue','yellow','black']
@@ -46,8 +48,7 @@ let chart=new Chart(myChart,{
 //   }
 });
 
-// line
-
+// Chartline
 //static data passing
 let chartLine=document.getElementById("chartLine");
 let chartLi=new Chart(chartLine,{
@@ -60,5 +61,71 @@ let chartLi=new Chart(chartLine,{
           // backgroundColor:['red','green','blue','yellow','black']
       }]
   },
+
+});
+
+//chartBar
+let chartBar=document.getElementById("chartBar");
+let chartB=new Chart(chartBar,{
+  type:'bar',//bar,horizontalBar,pie,line,doughnut,raddar,pollarArea
+  data:{
+      labels:["2020","2021","2022","2023","2024"],
+      datasets:[{
+          label:'Population of Pakistan',
+          data:[227196741,231402117,235824862,240485658,245209815],
+          // backgroundColor:['red','green','blue','yellow','black']
+      }]
+  },
+  options: {
+    indexAxis: 'y',
+    scales: {
+      x: {
+        beginAtZero: false,
+       
+      }
+    }
+  },
  
-})
+});
+
+//chartDoughnut
+let chartDoughnut=document.getElementById("chartDoughnut");
+let chartD=new Chart(chartDoughnut,{
+    type:'doughnut',//bar,horizontalBar,pie,line,doughnut,raddar,pollarArea
+    data:{
+        labels:["2020","2021","2022","2023","2024"],
+        datasets:[{
+            label:'Population of Pakistan',
+            data:[227196741,231402117,235824862,240485658,245209815],
+            // backgroundColor:['red','green','blue','yellow','black']
+        }]
+    },
+  });
+  
+//chartPolarArea
+let chartPolarArea=document.getElementById("chartPolarArea");
+let chartP=new Chart(chartPolarArea,{
+    type:'polarArea',//bar,horizontalBar,pie,line,doughnut,raddar,pollarArea
+    data:{
+        labels:["2020","2021","2022","2023","2024"],
+        datasets:[{
+            label:'Population of Pakistan',
+            data:[227196741,231402117,235824862,240485658,245209815],
+            // backgroundColor:['red','green','blue','yellow','black']
+        }]
+    },
+  });
+
+  //radarChart
+  let chartRadar=document.getElementById("chartRadar");
+    let chartR=new Chart(chartRadar,{
+        type:'radar',//bar,horizontalBar,pie,line,doughnut,raddar,pollarArea
+        data:{
+            labels:["2020","2021","2022","2023","2024"],
+            datasets:[{
+                label:'Population of Pakistan',
+                data:[227196741,231402117,235824862,240485658,245209815],
+                // backgroundColor:['red','green','blue','yellow','black']
+            }]
+        },
+    });
