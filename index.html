@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart Js</title>
+    <style>
+       
+        #canvasDiv{
+            width: 500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+      
+        }
+        .head{
+            font-size: 50px;
+            font-family: Helvetica Neue;
+            font-style: italic;
+            text-align: center;
+        }
+        @media(max-width:800px){
+            #canvasDiv{
+              flex-wrap: wrap;
+              width: 350px;
+              padding: 10px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h2 class="head">Population Of Pakistan</h2>
+    <div id="canvasDiv">
+      <canvas id="myChart"></canvas>
+      <canvas id="chartLine"></canvas>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   
+    <script src="./chart.js"></script>
+</body>
+</html>
+
